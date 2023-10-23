@@ -1,13 +1,13 @@
 module.exports = {
-  "root": true,
-  "env": {
+  root: true,
+  env: {
     browser: true,
     node: true
   },
+  parser: "vue-eslint-parser",
   extends: [
     'standard',
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended'
+    '@nuxtjs/eslint-config-typescript'
   ],
   plugins: [
   ],
