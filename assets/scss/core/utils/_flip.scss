@@ -1,0 +1,14 @@
+/** This Place For Utils **/
+.#{$namespace} {
+  & .flip {
+    &-x {
+      transform: scaleX(-1);
+    }
+
+    &-y {
+      transform: scaleY(-1);
+    }
+  }
+}
+
+/* ************************************ */
