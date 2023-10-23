@@ -10,7 +10,7 @@
 
 /** Phone Screen **/
 @media screen and (min-width: $screen-phone) {
-  body[data-app-theme="example"] {
+  body[data-app-theme='example'] {
     &.#{namespace} {
       & .l-example {
         // create an awesome styling here

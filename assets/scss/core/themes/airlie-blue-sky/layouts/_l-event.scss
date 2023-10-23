@@ -10,7 +10,7 @@
 ******************************************/
 
 /** This Place For Layouts Event **/
-body[data-app-theme="airlie-blue-sky"] {
+body[data-app-theme='airlie-blue-sky'] {
   & .#{$namespace} {
     & .l-event {
       background: $bg-airlie-sky-blue;

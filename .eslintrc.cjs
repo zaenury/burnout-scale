@@ -4,28 +4,34 @@ module.exports = {
     browser: true,
     node: true
   },
-  parser: "vue-eslint-parser",
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser'
+  },
   extends: [
     'standard',
-    '@nuxtjs/eslint-config-typescript'
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:prettier/recommended'
   ],
-  plugins: [
-  ],
+  plugins: [],
   // add your custom rules here
   rules: {
     'no-new': 0,
     'no-void': 'off',
     'no-useless-constructor': 'off',
     'func-call-spacing': 'off',
-    'curly': 'off',
+    curly: 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'import/no-named-as-default-member': 'off',
     'vue/valid-v-slot': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/no-v-html': 'off',
-    'vue/no-lone-template': ['error', {
-      ignoreAccessible: true
-    }]
+    'vue/no-lone-template': [
+      'error',
+      {
+        ignoreAccessible: true
+      }
+    ]
   }
 }

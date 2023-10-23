@@ -3,26 +3,26 @@
 ******************************************/
 
 /************** Font **************/
-$font-example:                                'Example Fonts';
-$font-example-path:                           './../fonts/example/';
-$font-example-typeface:                       'Example Fonts', sans-serif;
+$font-example: 'Example Fonts';
+$font-example-path: './../fonts/example/';
+$font-example-typeface: 'Example Fonts', sans-serif;
 
-$font-roboto-typeface:                        'Roboto', sans-serif;
-$font-lato-typeface:                          'Lato', sans-serif;
+$font-roboto-typeface: 'Roboto', sans-serif;
+$font-lato-typeface: 'Lato', sans-serif;
 
-$typeface-primary:                            $font-roboto-typeface;
+$typeface-primary: $font-roboto-typeface;
 
 /* ************************************ */
 
 /************** Theme Color **************/
-$color-header:                                 $color-red;
-$color-body:                                   $color-white;
-$color-main-text:                              $color-black;
-$color-line:                                   $color-dark-light-gray;
-$color-success:                                $color-green;
+$color-header: $color-red;
+$color-body: $color-white;
+$color-main-text: $color-black;
+$color-line: $color-dark-light-gray;
+$color-success: $color-green;
 
 $bg-airlie-sky-blue: #e9ecef;
-$bg-section-airlie-sky-blue: #AAC6C8;
+$bg-section-airlie-sky-blue: #aac6c8;
 $primary-text-airlie-sky-blue: #343a40;
 
 /* ************************************ */

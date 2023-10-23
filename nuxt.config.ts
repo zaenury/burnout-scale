@@ -4,18 +4,13 @@ export default defineNuxtConfig({
 
   ssr: false,
 
-  css: [
-    'vuetify/lib/styles/main.sass',
-    '~/assets/scss/main.scss'
-  ],
+  css: ['vuetify/lib/styles/main.sass', '~/assets/scss/main.scss'],
 
   build: {
     transpile: ['vuetify']
   },
 
-  modules: [
-    '@nuxtjs/tailwindcss'
-  ],
+  modules: ['@nuxtjs/tailwindcss'],
 
   vite: {
     define: {
