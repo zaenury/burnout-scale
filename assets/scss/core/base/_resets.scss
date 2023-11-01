@@ -134,4 +134,10 @@ input {
   font-family: $typeface-primary !important;
 }
 
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
 /* ************************************ */

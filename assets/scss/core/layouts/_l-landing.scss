@@ -1,0 +1,71 @@
+/******************************************
+  Some tips for creating layouts :
+  - Add `l` prefix before the name of layouts
+  - Or Just copy paste this structure of styling code into your new layouts styling file
+  - Dont forget to register your layouts into `_layouts.scss`
+******************************************/
+
+/** This Place For Layouts Landing **/
+.#{$namespace} {
+  & .l-landing {
+    & .landing {
+      &__top-content {
+        position: relative;
+        background: $primary-color;
+        border-bottom-right-radius: 56px;
+        border-bottom-left-radius: 56px;
+
+        & .top-content {
+          &__wrapper {
+            position: relative;
+            width: 100%;
+            padding: 24px;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+            & img {
+              margin: auto;
+            }
+          }
+        }
+      }
+
+      &__bottom-content {
+        & .bottom-content {
+          &__wrapper {
+            position: relative;
+            padding: 24px;
+
+            & .wrapper {
+              &__content-text {
+                position: relative;
+                padding-top: 48px;
+                text-align: center;
+
+                &.content-text {
+                  &--action {
+                    display: flex;
+                  }
+                }
+
+                & .content-text {
+                  &__intro {
+                    & .intro {
+                      &__title {
+                        margin-bottom: 24px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ************************************ */

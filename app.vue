@@ -1,5 +1,7 @@
 <template>
-  <div class="enem-themes">
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <div class="enem-themes">
+      <NuxtPage />
+    </div>
+  </NuxtLayout>
 </template>

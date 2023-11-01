@@ -9,8 +9,9 @@ $font-example-typeface: 'Example Fonts', sans-serif;
 
 $font-roboto-typeface: 'Roboto', sans-serif;
 $font-lato-typeface: 'Lato', sans-serif;
+$font-nunito: 'Nunito Sans', sans-serif;
 
-$typeface-primary: $font-roboto-typeface;
+$typeface-primary: $font-nunito;
 
 /* ************************************ */
 
@@ -21,8 +22,12 @@ $color-main-text: $color-black;
 $color-line: $color-dark-light-gray;
 $color-success: $color-green;
 
-$bg-airlie-sky-blue: #e9ecef;
-$bg-section-airlie-sky-blue: #aac6c8;
-$primary-text-airlie-sky-blue: #343a40;
+$color-purple: #3248DA;
+$color-purple-secondary: #3248DA80;
+$color-sky-blue: #00CAF2;
+$color-white-grey: #F2F3F5;
+
+$primary-color: $color-purple;
+$secondary-color: $color-sky-blue;
 
 /* ************************************ */
