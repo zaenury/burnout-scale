@@ -142,7 +142,11 @@ export default defineNuxtConfig({
     transpile: ['vuetify']
   },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
+
+  pinia: {
+    storesDirs: ['./stores/**']
+  },
 
   vite: {
     define: {

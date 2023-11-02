@@ -1,7 +1,10 @@
 <script setup>
-const layoutCustomProps = useAttrs()
+import { useGlobalSnackbar } from '@/composables/components/use-global-snackbar'
 
-console.info('here :: ', layoutCustomProps)
+const globalSnackbar = useGlobalSnackbar()
+const { reset: resetSnackbar } = globalSnackbar
+
+const snackbarState = reactive(globalSnackbar.state)
 </script>
 
 <template>
@@ -10,6 +13,14 @@ console.info('here :: ', layoutCustomProps)
       <v-container class="!p-0">
         <slot />
       </v-container>
+
+      <!-- Snackbar -->
+      <snackbar
+        v-model="snackbarState.opened"
+        :text="snackbarState.text"
+        :color="snackbarState.color"
+        @close="resetSnackbar(5000)"
+      />
     </v-main>
   </v-app>
 </template>

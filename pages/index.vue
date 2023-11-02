@@ -3,6 +3,8 @@ definePageMeta({
   layout: 'basic'
 })
 
+const router = useRouter()
+
 const contentIndexActive = ref(0)
 
 const entries = computed(() => {
@@ -34,6 +36,15 @@ const entries = computed(() => {
   ]
 })
 const contentActive = computed(() => entries.value[contentIndexActive.value])
+
+watch(
+  () => contentIndexActive.value,
+  (value) => {
+    if (value === entries.value.length) {
+      router.push('kyc')
+    }
+  }
+)
 </script>
 
 <template>
@@ -58,7 +69,7 @@ const contentActive = computed(() => entries.value[contentIndexActive.value])
         </div>
 
         <div class="wrapper__content-text content-text--action">
-          <v-btn variant="plain"> Skip </v-btn>
+          <v-btn variant="plain" to="/kyc"> Skip </v-btn>
 
           <v-spacer />
 
