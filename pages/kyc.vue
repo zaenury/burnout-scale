@@ -1,23 +1,24 @@
 <script setup>
-import { useAppStore } from '~/stores/app'
+import { useKyc, useQuiz } from '@/composables'
 
 definePageMeta({
   layout: 'basic'
 })
 
 const router = useRouter()
-const appStore = useAppStore()
-
-const entry = ref({
-  ...appStore.kyc
-})
-const loading = ref(false)
+const { entry, loading, saveKyc, removeKyc } = useKyc()
+const { removeQuiz } = useQuiz()
 
 function actionSave() {
+  saveKyc()
+  removeQuiz()
+
   router.push('/app')
 }
 
 function actionCancel() {
+  removeKyc()
+
   router.push('/')
 }
 </script>
@@ -59,13 +60,21 @@ function actionCancel() {
           </v-col>
 
           <v-col cols="12">
-            <v-btn color="primary" block class="mb-4" @click="actionSave">
+            <v-btn
+              color="primary"
+              block
+              size="large"
+              class="mb-4"
+              :disabled="!entry.type || !entry.name || !entry.identityNumber"
+              @click="actionSave"
+            >
               Lanjutkan
             </v-btn>
 
             <v-btn
               color="secondary"
               variant="outlined"
+              size="large"
               block
               @click="actionCancel"
             >

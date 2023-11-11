@@ -12,6 +12,25 @@ export interface Kyc {
   identityNumber: string
 }
 
+export interface QuizOptions {
+  id: string
+  title: string
+  score: number
+}
+
+export interface QuizResponse {
+  id: string
+  quizId: string
+  quizResponse: string
+  score: number
+}
+
+export interface Quiz {
+  id: string
+  question: string
+  options: QuizOptions[]
+}
+
 export const useAppStore = defineStore('app', {
   state: () => ({
     isLoading: {
@@ -24,6 +43,7 @@ export const useAppStore = defineStore('app', {
       name: '',
       identityNumber: ''
     } as Kyc,
+    quizResponse: [] as QuizResponse[],
     snackbar: {
       opened: false,
       text: '',
@@ -33,6 +53,10 @@ export const useAppStore = defineStore('app', {
   actions: {
     setKyc(value: Kyc) {
       this.kyc = value
+    },
+
+    setQuizResponse(value: QuizResponse[]) {
+      this.quizResponse = value
     },
 
     setSnackbar(value: Snackbar) {

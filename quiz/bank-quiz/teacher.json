@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "question": "Saya bosan dengan pekerjaan saya."
+  },
+  {
+    "id": "2",
+    "question": "Saya bosan beraktifitas dengan murid-murid saya."
+  },
+  {
+    "id": "3",
+    "question": "Saya lelah dengan semua tugas dalam pekerjaan saya."
+  },
+  {
+    "id": "4",
+    "question": "Pekerjaan saya tidak lagi menyenangkan."
+  },
+  {
+    "id": "5",
+    "question": "Saya enggan pergi ke tempat kerja saya."
+  },
+  {
+    "id": "6",
+    "question": "Saya merasa terasing di tempat kerja."
+  },
+  {
+    "id": "7",
+    "question": "Saya merasa frustrasi di tempat kerja."
+  },
+  {
+    "id": "8",
+    "question": "Saya menghindari untuk berkomunikasi dengan murid."
+  },
+  {
+    "id": "9",
+    "question": "Saya menghindari untuk berkomunikasi dengan rekan kerja saya."
+  },
+  {
+    "id": "10",
+    "question": "Saya berkomunikasi dengan cara yang tidak bersahabat di tempat kerja."
+  },
+  {
+    "id": "11",
+    "question": "Saya mendadak merasa sakit di tempat kerja."
+  },
+  {
+    "id": "12",
+    "question": "Saya berpikir untuk menyebut murid-murid saya dengan nama panggilan yang jelek."
+  },
+  {
+    "id": "13",
+    "question": "Saya menghindari untuk bertemu murid-murid saya."
+  },
+  {
+    "id": "14",
+    "question": "Murid-murid saya membuat saya muak."
+  },
+  {
+    "id": "15",
+    "question": "Perut saya menjadi mual ketika memikirkan pekerjaan."
+  },
+  {
+    "id": "16",
+    "question": "Saya berharap orang-orang meninggalkan saya sendirian di tempat kerja."
+  },
+  {
+    "id": "17",
+    "question": "Saya tidak tenang saat akan pergi ke tempat kerja."
+  },
+  {
+    "id": "18",
+    "question": "Saya apatis terhadap pekerjaan saya."
+  },
+  {
+    "id": "19",
+    "question": "Saya merasa stres di tempat kerja."
+  },
+  {
+    "id": "20",
+    "question": "Saya sulit berkonsentrasi saat bekerja"
+  }
+]

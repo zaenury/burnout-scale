@@ -35,11 +35,11 @@ const innerIsDisabled = ref(false)
 const entries = computed(() => [
   {
     label: 'Guru',
-    value: 'guru'
+    value: 'teacher'
   },
   {
     label: 'Murid',
-    value: 'murid'
+    value: 'student'
   }
 ])
 

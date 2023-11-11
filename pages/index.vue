@@ -48,7 +48,7 @@ watch(
 </script>
 
 <template>
-  <div class="l-landing">
+  <div v-if="contentActive" class="l-landing">
     <div class="landing__top-content">
       <div class="top-content__wrapper">
         <img :src="contentActive.image" width="250" />

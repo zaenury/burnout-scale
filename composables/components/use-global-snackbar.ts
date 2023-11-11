@@ -37,7 +37,6 @@ export const useGlobalSnackbar = () => {
       } as Snackbar)
     },
     reset(delay = 0) {
-      console.info('reseett')
       setTimeout(() => {
         appStore.setSnackbar({
           opened: false,

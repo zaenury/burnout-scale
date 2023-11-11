@@ -12,8 +12,8 @@
       &__top-content {
         position: relative;
         background: $primary-color;
-        border-bottom-right-radius: 56px;
-        border-bottom-left-radius: 56px;
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
 
         & .top-content {
           &__wrapper {
@@ -37,6 +37,8 @@
           &__wrapper {
             position: relative;
             padding: 24px;
+            padding-right: 16px;
+            padding-left: 16px;
 
             & .wrapper {
               &__content-text {
@@ -59,6 +61,28 @@
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.landing {
+      &--quiz {
+        & .landing {
+          &__top-content {
+            & .top-content {
+              &__wrapper {
+                padding-bottom: 250px;
+              }
+            }
+          }
+
+          &__bottom-content {
+            & .bottom-content {
+              &__wrapper {
+                top: -250px;
               }
             }
           }

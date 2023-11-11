@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "title": "Tidak pernah sama sekali",
+    "score": 1
+  },
+  {
+    "id": "2",
+    "title": "Satu sampai tiga kali dalam sebulan",
+    "score": 2
+  },
+  {
+    "id": "3",
+    "title": "Rata-rata sekali dalam seminggu",
+    "score": 3
+  },
+  {
+    "id": "4",
+    "title": "Beberapa kali dalam seminggu",
+    "score": 4
+  },
+  {
+    "id": "5",
+    "title": "Setiap hari",
+    "score": 5
+  }
+]

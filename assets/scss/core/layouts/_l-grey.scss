@@ -5,10 +5,12 @@
   - Dont forget to register your layouts into `_layouts.scss`
 ******************************************/
 
-/** This Place For Layouts Basic **/
+/** This Place For Layouts Grey **/
 .#{$namespace} {
-  &.l-basic {
+  &.l-grey {
     & .c-main {
+      background: #F2F3F5;
+
       & .v-container {
         padding-top: 0;
       }
