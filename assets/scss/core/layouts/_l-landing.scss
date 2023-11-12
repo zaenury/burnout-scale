@@ -88,6 +88,25 @@
           }
         }
       }
+
+      &--quiz-score {
+        & .landing {
+          &__top-content {
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+
+            & .top-content {
+              &__wrapper {
+                padding-bottom: 0;
+              }
+            }
+          }
+
+          &__bottom-content {
+            background: $primary-color;
+          }
+        }
+      }
     }
   }
 }

@@ -18,6 +18,11 @@ export const useKyc = () => {
   }
 
   function removeKyc() {
+    appStore.setKyc({
+      type: undefined,
+      name: '',
+      identityNumber: ''
+    })
     window.localStorage.removeItem(KEY_KYC)
   }
 

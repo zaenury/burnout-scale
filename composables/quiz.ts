@@ -68,22 +68,32 @@ export const useQuiz = () => {
     () => loading.value || !quizPosition.value || quizPosition.value === 1
   )
   const disabledNext = computed(
-    () =>
-      loading.value ||
-      !quizPosition.value ||
-      quizPosition.value === quizTotal.value
+    () => loading.value || !quizPosition.value || !entryDetail.value
   )
 
   function nextQuestion() {
     if (!quizDetail.value) return
+    const activeQuizId = +quizDetail.value.id
+    const nextQuizId = activeQuizId + 1
+
     saveQuiz()
-    router.push(`/app/quiz/${+quizDetail.value.id + 1}`)
+
+    if (quizPosition.value === quizTotal.value) {
+      router.push('/app/quiz/score')
+
+      return
+    }
+
+    router.push(`/app/quiz/${nextQuizId}`)
   }
 
   function prevQuestion() {
     if (!quizDetail.value) return
+    const activeQuizId = +quizDetail.value.id
+    const prevQuizId = activeQuizId - 1
+
     saveQuiz()
-    router.push(`/app/quiz/${+quizDetail.value.id - 1}`)
+    router.push(`/app/quiz/${prevQuizId}`)
   }
 
   function chooseResponse(item: QuizOptions) {
