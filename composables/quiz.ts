@@ -5,10 +5,11 @@ import { studentQuestions, teacherQuestions } from '~/quiz'
 export const KEY_QUIZ_RESPONSE = 'BS_QUIZ_RESPONSE'
 
 export const useQuiz = () => {
+  const config = useRuntimeConfig()
   const route = useRoute()
   const router = useRouter()
   const appStore = useAppStore()
-  const { entry: kycEntry } = useKyc()
+  const { entry: kycEntry, kycType } = useKyc()
 
   const entry = ref<QuizResponse[]>([])
   const loading = ref(false)
@@ -134,6 +135,36 @@ export const useQuiz = () => {
     window.localStorage.removeItem(KEY_QUIZ_RESPONSE)
   }
 
+  function sendToWhatsapp() {
+    const { teacherNumber } = config.public
+
+    if (!teacherNumber) throw new Error('No phone number')
+
+    const { name, identityNumber, studyClass } = kycEntry.value
+    let userDetail = 'Data Belum Lengkap'
+
+    if (kycType.value === 'Guru') {
+      userDetail = `NIK: ${identityNumber},`
+    }
+
+    if (kycType.value === 'Murid') {
+      userDetail = `NISN: ${identityNumber},
+      Kelas: ${studyClass},`
+    }
+
+    const message = encodeURIComponent(`
+      Halo Guru BK,
+      Saya ${kycType.value}, dengan data diri sebagai berikut:
+      Nama: ${name},
+      ${userDetail}
+      telah melakukan test skala kelelahan dengan score ${quizScore.value} yang menunjukkan ${quizDefinition.value}
+    `)
+
+    const whatsappUrl = `https://wa.me/${teacherNumber}?text=${message}`
+
+    window.open(whatsappUrl, '_blank')
+  }
+
   watch(
     () => quizResponse.value,
     (value) => {
@@ -175,6 +206,7 @@ export const useQuiz = () => {
     removeQuiz,
     chooseResponse,
     nextQuestion,
-    prevQuestion
+    prevQuestion,
+    sendToWhatsapp
   }
 }

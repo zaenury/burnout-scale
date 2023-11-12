@@ -5,7 +5,7 @@ definePageMeta({
   layout: 'grey'
 })
 
-const { quizResponse, quizScore, quizDefinition } = useQuiz()
+const { quizResponse, quizScore, quizDefinition, sendToWhatsapp } = useQuiz()
 </script>
 
 <template>
@@ -54,6 +54,7 @@ const { quizResponse, quizScore, quizDefinition } = useQuiz()
               color="#00CAF2"
               size="large"
               class="mb-4 ml-0 mr-0 text-none w-full"
+              @click="sendToWhatsapp"
             >
               Lapor Guru BK
             </v-btn>

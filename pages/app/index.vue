@@ -28,6 +28,20 @@ function actionNext() {
       <div class="bottom-content__wrapper">
         <v-row>
           <v-col cols="12">
+            <div class="w-full text-center flex justify-center">
+              <img src="/images/tutwuri-handayani.jpeg" width="150" />
+            </div>
+          </v-col>
+
+          <v-col cols="12">
+            <div class="w-full text-center flex justify-between">
+              <img src="/images/unida.jpeg" width="120" />
+
+              <img src="/images/smkn1jenangan.jpeg" width="120" />
+            </div>
+          </v-col>
+
+          <v-col cols="12">
             <v-btn
               color="primary"
               block

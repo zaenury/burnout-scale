@@ -52,8 +52,18 @@ function actionCancel() {
             <v-text-field
               v-model="entry.identityNumber"
               variant="outlined"
-              label="NIK atau NIS"
-              placeholder="Masukan NIK atau NIS"
+              label="NIK atau NISN"
+              placeholder="Masukan NIK atau NISN"
+              outlined
+              :loading="loading"
+            />
+
+            <v-text-field
+              v-if="entry.type === 'student'"
+              v-model="entry.studyClass"
+              variant="outlined"
+              label="Kelas"
+              placeholder="Masukan Kelas"
               outlined
               :loading="loading"
             />

@@ -10,6 +10,7 @@ export interface Kyc {
   type?: string
   name: string
   identityNumber: string
+  studyClass?: string
 }
 
 export interface QuizOptions {
@@ -41,7 +42,8 @@ export const useAppStore = defineStore('app', {
     kyc: {
       type: undefined,
       name: '',
-      identityNumber: ''
+      identityNumber: '',
+      studyClass: undefined
     } as Kyc,
     quizResponse: [] as QuizResponse[],
     snackbar: {

@@ -2,6 +2,7 @@ declare module '@burnout-scale/website' {
   export interface Env {
     environment: string
     hostname: string
+    teacherNumber: string
     apiBaseUrlPublic: string
     firebase: {
       apiKey: string

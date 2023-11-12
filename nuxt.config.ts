@@ -8,11 +8,17 @@ const ENVIRONMENT = process.env.CONFIG_ENV || process.env.NODE_ENV || 'local'
 const CONFIGENVIRONMENT: ConfigEnvironment = require(
   `./config/${ENVIRONMENT.toLowerCase()}.json`
 )
-const { copywrite, hostname } = CONFIGENVIRONMENT.env
+const { copywrite, hostname, teacherNumber } = CONFIGENVIRONMENT.env
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
+  runtimeConfig: {
+    public: {
+      teacherNumber
+    }
+  },
 
   ssr: false,
 
