@@ -29,15 +29,15 @@ function actionNext() {
         <v-row>
           <v-col cols="12">
             <div class="w-full text-center flex justify-center">
-              <img src="/images/tutwuri-handayani.jpeg" width="150" />
+              <img src="/images/tutwuri-handayani.png" width="150" />
             </div>
           </v-col>
 
           <v-col cols="12">
             <div class="w-full text-center flex justify-between">
-              <img src="/images/unida.jpeg" width="120" />
+              <img src="/images/unida.png" width="120" />
 
-              <img src="/images/smkn1jenangan.jpeg" width="120" />
+              <img src="/images/smkn1jenangan.png" width="120" />
             </div>
           </v-col>
 
