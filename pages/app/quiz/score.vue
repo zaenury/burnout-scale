@@ -56,7 +56,7 @@ const { quizResponse, quizScore, quizDefinition, sendToWhatsapp } = useQuiz()
               class="mb-4 ml-0 mr-0 text-none w-full"
               @click="sendToWhatsapp"
             >
-              Lapor Guru BK
+              Konsul Guru BK
             </v-btn>
 
             <v-btn

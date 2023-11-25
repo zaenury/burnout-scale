@@ -22,10 +22,10 @@ $color-main-text: $color-black;
 $color-line: $color-dark-light-gray;
 $color-success: $color-green;
 
-$color-purple: #3248DA;
-$color-purple-secondary: #3248DA80;
-$color-sky-blue: #00CAF2;
-$color-white-grey: #F2F3F5;
+$color-purple: linear-gradient(#3248da, #00caf2);
+$color-purple-secondary: #3248da80;
+$color-sky-blue: #00caf2;
+$color-white-grey: #f2f3f5;
 
 $primary-color: $color-purple;
 $secondary-color: $color-sky-blue;

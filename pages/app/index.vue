@@ -8,6 +8,10 @@ definePageMeta({
 const router = useRouter()
 const { kycType } = useKyc()
 
+function aboutUs() {
+  router.push('/app/quiz/aboutus')
+}
+
 function actionNext() {
   router.push('/app/quiz/1')
 }
@@ -25,22 +29,19 @@ function actionNext() {
       </div>
     </div>
     <div class="landing__bottom-content">
-      <div class="bottom-content__wrapper">
+      <div class="bottom-content__wrapper mt-60">
         <v-row>
           <v-col cols="12">
-            <div class="w-full text-center flex justify-center">
-              <img src="/images/tutwuri-handayani.png" width="150" />
-            </div>
+            <v-btn
+              color="#00CAF2"
+              block
+              size="large"
+              class="mb-4"
+              @click="aboutUs"
+            >
+              Tentang Kami
+            </v-btn>
           </v-col>
-
-          <v-col cols="12">
-            <div class="w-full text-center flex justify-between">
-              <img src="/images/unida.png" width="120" />
-
-              <img src="/images/smkn1jenangan.png" width="120" />
-            </div>
-          </v-col>
-
           <v-col cols="12">
             <v-btn
               color="primary"

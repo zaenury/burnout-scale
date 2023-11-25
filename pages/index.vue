@@ -5,81 +5,56 @@ definePageMeta({
 
 const router = useRouter()
 
-const contentIndexActive = ref(0)
-
-const entries = computed(() => {
-  return [
-    {
-      image: '/images/depression.png',
-      title: 'Mengukur Kelelahan',
-      description:
-        'Membantu siswa dan pendidik untuk memahami dengan lebih baik perasaan kelelahan dan potensial dampaknya.'
-    },
-    {
-      image: '/images/wawasan.png',
-      title: 'Memberikan Wawasan',
-      description:
-        'Membantu siswa dapat mengambil langkah-langkah untuk mengelola stres dan meningkatkan kesejahteraan mereka.'
-    },
-    {
-      image: '/images/sumber-daya.png',
-      title: 'Sumber Daya Dukungan',
-      description:
-        'Menyediakan saran praktis, teknik relaksasi, dan informasi tentang sumber daya lain yang dapat membantu siswa mengatasi kelelahan.'
-    },
-    {
-      image: '/images/keamanan.png',
-      title: 'Privasi dan Keamanan',
-      description:
-        'Data yang dikumpulkan dalam aplikasi ini hanya digunakan untuk memberikan wawasan kepada pengguna dan tidak akan dibagikan kepada pihak ketiga tanpa izin.'
-    }
-  ]
-})
-const contentActive = computed(() => entries.value[contentIndexActive.value])
-
-watch(
-  () => contentIndexActive.value,
-  (value) => {
-    if (value === entries.value.length) {
-      router.push('kyc')
-    }
-  }
-)
+function actionNext() {
+  router.push('welcome')
+}
 </script>
 
 <template>
-  <div v-if="contentActive" class="l-landing">
+  <div class="l-landing landing--app">
     <div class="landing__top-content">
       <div class="top-content__wrapper">
-        <img :src="contentActive.image" width="250" />
+        <h3 class="text-xl">
+          <strong>Instrumen Burnout untuk Siswa & Guru</strong>
+        </h3>
       </div>
     </div>
     <div class="landing__bottom-content">
       <div class="bottom-content__wrapper">
-        <div class="wrapper__content-text">
-          <div class="content-text__intro">
-            <h3 class="intro__title text-xl">
-              <strong>{{ contentActive.title }}</strong>
-            </h3>
+        <h4 class="text-l text-center">
+          <span>
+            Instrumen ini disusun oleh tim Pengabdian Masyarakat Universitas
+            Darussalam Gontor dengan dukungan hibah Kementerian Pendidikan
+            Kebudayaan RI Tahun 2023
+          </span>
+        </h4>
+        <v-row class="pt-8">
+          <v-col cols="12">
+            <div class="w-full text-center flex justify-center">
+              <img src="/images/tutwuri-handayani.png" width="150" />
+            </div>
+          </v-col>
 
-            <p class="intro__description">
-              {{ contentActive.description }}
-            </p>
-          </div>
-        </div>
+          <v-col cols="12">
+            <div class="w-full text-center flex justify-between">
+              <img src="/images/unida.png" width="120" />
 
-        <div class="wrapper__content-text content-text--action">
-          <v-btn variant="plain" to="/kyc"> Skip </v-btn>
+              <img src="/images/smkn1jenangan.png" width="120" />
+            </div>
+          </v-col>
 
-          <v-spacer />
-
-          <v-btn
-            rounded="lg"
-            icon="mdi-chevron-right"
-            color="primary"
-            @click="++contentIndexActive"
-          />
-        </div>
+          <v-col cols="12">
+            <v-btn
+              color="primary"
+              block
+              size="large"
+              class="mb-4"
+              @click="actionNext"
+            >
+              Continue
+            </v-btn>
+          </v-col>
+        </v-row>
       </div>
     </div>
   </div>
