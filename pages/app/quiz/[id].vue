@@ -67,27 +67,26 @@ const {
               </div>
             </v-card-text>
 
-            <v-card-actions class="!block">
+            <v-card-actions class="justify-between">
+              <v-btn
+                variant="outlined"
+                color="#00CAF2"
+                size="large"
+                class="mb-4 text-none w-5/12"
+                :disabled="disabledPrev"
+                @click="prevQuestion"
+              >
+                PREV
+              </v-btn>
               <v-btn
                 variant="flat"
                 color="primary"
                 size="large"
-                class="mb-4 ml-0 mr-0 text-none w-full"
+                class="mb-4 text-none w-5/12"
                 :disabled="disabledNext"
                 @click="nextQuestion"
               >
-                Next
-              </v-btn>
-
-              <v-btn
-                variant="outlined"
-                color="primary"
-                size="large"
-                class="mb-4 ml-0 mr-0 text-none w-full"
-                :disabled="disabledPrev"
-                @click="prevQuestion"
-              >
-                Prev
+                NEXT
               </v-btn>
             </v-card-actions>
           </v-card>

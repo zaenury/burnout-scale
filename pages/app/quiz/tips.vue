@@ -8,6 +8,10 @@ definePageMeta({
 
 const router = useRouter()
 
+function actionBack() {
+  router.go(-1)
+}
+
 const { quizResponse, removeQuiz } = useQuiz()
 const { kycType, entry: kycEntry, removeKyc } = useKyc()
 
@@ -54,15 +58,24 @@ function endProcess() {
             </p>
           </v-card-text>
 
-          <v-card-actions class="!block">
+          <v-card-actions class="justify-between">
+            <v-btn
+              variant="outlined"
+              color="#00CAF2"
+              size="large"
+              class="mb-4 w-5/12"
+              @click="actionBack"
+            >
+              Back
+            </v-btn>
             <v-btn
               variant="flat"
               color="primary"
               size="large"
-              class="mb-4 ml-0 mr-0 text-none w-full"
+              class="mb-4 text-none w-5/12"
               @click="endProcess"
             >
-              Tutup Aplikasi
+              TUTUP APLIKASI
             </v-btn>
           </v-card-actions>
         </v-card>

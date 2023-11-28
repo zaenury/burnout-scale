@@ -11,7 +11,7 @@ const entries = computed(() => {
   return [
     {
       image: '/images/depression.png',
-      title: 'Mengukur Kelelahan',
+      title: 'Mengukur Kelelahan (Burnout)',
       description:
         'Membantu siswa dan pendidik untuk memahami dengan lebih baik perasaan kelelahan dan potensial dampaknya.'
     },
@@ -19,13 +19,13 @@ const entries = computed(() => {
       image: '/images/wawasan.png',
       title: 'Memberikan Wawasan',
       description:
-        'Membantu siswa dapat mengambil langkah-langkah untuk mengelola stres dan meningkatkan kesejahteraan mereka.'
+        'Membantu siswa dapat pendidik mengambil langkah-langkah untuk mengelola stres dan meningkatkan kesejahteraan mereka.'
     },
     {
       image: '/images/sumber-daya.png',
       title: 'Sumber Daya Dukungan',
       description:
-        'Menyediakan saran praktis, teknik relaksasi, dan informasi tentang sumber daya lain yang dapat membantu siswa mengatasi kelelahan.'
+        'Menyediakan saran praktis, teknik relaksasi, dan informasi tentang sumber daya lain yang dapat membantu siswa dan pendidik mengatasi kelelahan.'
     },
     {
       image: '/images/keamanan.png',

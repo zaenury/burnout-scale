@@ -5,7 +5,7 @@ definePageMeta({
   layout: 'grey'
 })
 
-const { quizResponse, quizScore, quizDefinition, sendToWhatsapp } = useQuiz()
+const { quizResponse, quizScore, quizDefinition } = useQuiz()
 </script>
 
 <template>
@@ -48,25 +48,24 @@ const { quizResponse, quizScore, quizDefinition, sendToWhatsapp } = useQuiz()
             </div>
           </v-card-text>
 
-          <v-card-actions class="!block">
+          <v-card-actions class="justify-between">
             <v-btn
               variant="flat"
               color="#00CAF2"
               size="large"
-              class="mb-4 ml-0 mr-0 text-none w-full"
-              @click="sendToWhatsapp"
+              class="mb-4 text-none w-5/12"
+              to="/app/quiz/factor"
             >
-              Konsul Guru BK
+              FAKTOR BURNOUT
             </v-btn>
-
             <v-btn
               variant="flat"
               color="primary"
               size="large"
-              class="mb-4 ml-0 mr-0 text-none w-full"
-              to="/app/quiz/factor"
+              class="mb-4 text-none w-5/12"
+              to="/app/quiz/tips"
             >
-              Faktor Burn Out
+              TIPS
             </v-btn>
           </v-card-actions>
         </v-card>

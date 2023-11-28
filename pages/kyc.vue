@@ -36,51 +36,13 @@ function actionCancel() {
           <v-col cols="12">
             <TypeSelector
               v-model="entry.type"
-              label="Tipe"
-              placeholder="Masukan tipe"
-            />
-
-            <v-text-field
-              v-model="entry.name"
-              variant="outlined"
-              label="Nama"
-              placeholder="Masukan nama"
-              outlined
-              :loading="loading"
-            />
-
-            <v-text-field
-              v-model="entry.identityNumber"
-              variant="outlined"
-              label="NIK atau NISN"
-              placeholder="Masukan NIK atau NISN"
-              outlined
-              :loading="loading"
-            />
-
-            <v-text-field
-              v-if="entry.type === 'student'"
-              v-model="entry.studyClass"
-              variant="outlined"
-              label="Kelas"
-              placeholder="Masukan Kelas"
-              outlined
+              label="Peran"
+              placeholder="Masukan peran"
               :loading="loading"
             />
           </v-col>
 
-          <v-col cols="12">
-            <v-btn
-              color="primary"
-              block
-              size="large"
-              class="mb-4"
-              :disabled="!entry.type || !entry.name || !entry.identityNumber"
-              @click="actionSave"
-            >
-              Lanjutkan
-            </v-btn>
-
+          <v-col cols="6">
             <v-btn
               color="secondary"
               variant="outlined"
@@ -89,6 +51,18 @@ function actionCancel() {
               @click="actionCancel"
             >
               Batal
+            </v-btn>
+          </v-col>
+          <v-col cols="6">
+            <v-btn
+              color="primary"
+              block
+              size="large"
+              class="mb-4"
+              :disabled="!entry.type"
+              @click="actionSave"
+            >
+              Lanjutkan
             </v-btn>
           </v-col>
         </v-row>

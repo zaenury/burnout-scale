@@ -8,9 +8,6 @@ export interface Snackbar {
 
 export interface Kyc {
   type?: string
-  name: string
-  identityNumber: string
-  studyClass?: string
 }
 
 export interface QuizOptions {
@@ -40,10 +37,7 @@ export const useAppStore = defineStore('app', {
       form: false
     },
     kyc: {
-      type: undefined,
-      name: '',
-      identityNumber: '',
-      studyClass: undefined
+      type: undefined
     } as Kyc,
     quizResponse: [] as QuizResponse[],
     snackbar: {
