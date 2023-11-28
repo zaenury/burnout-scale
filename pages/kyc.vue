@@ -33,7 +33,7 @@ function actionCancel() {
     <div class="landing__bottom-content">
       <div class="bottom-content__wrapper">
         <v-row>
-          <v-col cols="12">
+          <v-col class="!pb-52 !pt-14" cols="12">
             <TypeSelector
               v-model="entry.type"
               label="Peran"
