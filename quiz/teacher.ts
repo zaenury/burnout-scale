@@ -1,7 +1,7 @@
 import options from './bank-quiz/options.json'
 import questions from './bank-quiz/teacher.json'
-import factors from './factor/student.json'
-import tips from './tips/student.json'
+import factors from './factor/teacher.json'
+import tips from './tips/teacher.json'
 
 export const teacherQuestions = () => {
   return questions.map((item) => ({

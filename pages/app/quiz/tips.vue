@@ -1,6 +1,6 @@
 <script setup>
 import { useQuiz, useKyc } from '~/composables'
-import { studentFactors, teacherFactors } from '~/quiz'
+import { studentTips, teacherTips } from '~/quiz'
 
 definePageMeta({
   layout: 'grey'
@@ -16,7 +16,7 @@ const { quizResponse, removeQuiz } = useQuiz()
 const { kycType, entry: kycEntry, removeKyc } = useKyc()
 
 const entries = computed(() =>
-  kycEntry.value.type === 'teacher' ? teacherFactors : studentFactors
+  kycEntry.value.type === 'teacher' ? teacherTips : studentTips
 )
 
 function endProcess() {
